@@ -55,9 +55,9 @@ git clone https://github.com/PuntoMaximo/VonVisionAI_OS buildroot.von.ext
 
 # To make the system
 
-# for the Radxa rock cm3 io board
+```
 source buildroot.von.ext/setup.von.sh yourPath/buildroot
-
+```
 
 Make sure you have the buildroot downloads directory present (when you are in the yourPath/buildroot directory execute the following) :
 
