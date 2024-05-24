@@ -1,0 +1,11 @@
+--- ./drivers/net/wireless/rockchip_wlan/Kconfigold	2024-01-31 15:31:16.799365876 -0500
++++ ./drivers/net/wireless/rockchip_wlan/Kconfig	2024-01-31 15:21:52.929080167 -0500
+@@ -38,7 +38,7 @@
+ 
+ menuconfig RTL_WIRELESS_SOLUTION
+ 	bool "Realtek Wireless Device Driver Support"
+-	default y
++	default n
+ 
+ if RTL_WIRELESS_SOLUTION
+ source "drivers/net/wireless/rockchip_wlan/rtl8188eu/Kconfig"

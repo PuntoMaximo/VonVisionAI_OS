@@ -1,0 +1,32 @@
+--- /examples/rknn_yolov5_demo/CMakeLists.txt	2023-10-20 09:28:54.876005616 +0000
++++ /examples/rknn_yolov5_demo/CMakeLists.txt	2023-10-20 09:28:50.852005604 +0000
+@@ -35,20 +35,10 @@
+   set(RKNN_RT_LIB ${RKNN_API_PATH}/${LIB_ARCH}/librknnrt.so)
+ endif()
+ include_directories(${RKNN_API_PATH}/include)
+-include_directories(${CMAKE_SOURCE_DIR}/../3rdparty)
+-
+-# opencv
+-if (CMAKE_SYSTEM_NAME STREQUAL "Android")
+-    set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/../3rdparty/opencv/OpenCV-android-sdk/sdk/native/jni/abi-${CMAKE_ANDROID_ARCH_ABI})
+-else()
+-  if(LIB_ARCH STREQUAL "armhf")
+-    set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/../3rdparty/opencv/opencv-linux-armhf/share/OpenCV)
+-  else()
+-    set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/../3rdparty/opencv/opencv-linux-aarch64/share/OpenCV)
+-  endif()
+-endif()
+-find_package(OpenCV REQUIRED)
+-
++include_directories(/usr/include)
++include_directories(/usr/include/opencv4/opencv2)
++set(OpenCV_DIR "/usr/lib/aarch64-linux-gun")
++find_package(OpenCV REQUIRED COMPONENTS core imgproc imgcodecs video videoio highgui)
+ #rga
+ if(TARGET_SOC STREQUAL "rk356x")
+   set(RGA_PATH ${CMAKE_SOURCE_DIR}/../3rdparty/rga/RK356X)
+@@ -93,3 +83,4 @@
+ install(PROGRAMS ${RKNN_RT_LIB} DESTINATION lib)
+ install(PROGRAMS ${RGA_LIB} DESTINATION lib)
+ install(DIRECTORY model DESTINATION ./)
++

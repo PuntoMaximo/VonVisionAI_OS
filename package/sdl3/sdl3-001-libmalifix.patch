@@ -1,0 +1,11 @@
+--- ./outoftree/src/video/kmsdrm/SDL_kmsdrmmouse.c	2023-07-28 00:35:04.000000000 -0400
++++ ./outoftree/src/video/kmsdrm/SDL_kmsdrmmousediff.c	2024-01-30 14:15:15.482683630 -0500
+@@ -102,7 +102,7 @@
+ 
+     dispdata->cursor_bo = KMSDRM_gbm_bo_create(viddata->gbm_dev,
+                                                dispdata->cursor_w, dispdata->cursor_h,
+-                                               GBM_FORMAT_ARGB8888, GBM_BO_USE_CURSOR | GBM_BO_USE_WRITE | GBM_BO_USE_LINEAR);
++                                               GBM_FORMAT_ARGB8888, GBM_BO_USE_CURSOR | GBM_BO_USE_WRITE);
+ 
+     if (!dispdata->cursor_bo) {
+         return SDL_SetError("Could not create GBM cursor BO");

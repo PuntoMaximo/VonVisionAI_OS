@@ -1,0 +1,6 @@
+config BR2_PACKAGE_FF-RKNN
+    bool "ffrknn"
+    help
+        ff-rknn - Real-time Object Detection with NPU (Rockchip).
+
+        https://github.com/avafinger/ff-rknn

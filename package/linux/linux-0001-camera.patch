@@ -1,0 +1,18 @@
+--- ./drivers/media/i2c/Kconfigold	2024-01-31 10:52:22.293066624 -0500
++++ ./drivers/media/i2c/Kconfig	2024-01-31 10:54:11.473916613 -0500
+@@ -839,6 +839,15 @@
+ 	  To compile this driver as a module, choose M here: the
+ 	  module will be called imx464.
+ 
++config VIDEO_IMX586
++	tristate "Sony IMX586 sensor support"
++	depends on I2C && VIDEO_V4L2 && VIDEO_V4L2_SUBDEV_API
++	depends on MEDIA_CAMERA_SUPPORT
++	default y
++	help
++	  This is a Video4Linux2 sensor driver for the Sony
++	  IMX586
++
+ config VIDEO_OS02G10
+ 	tristate "OmniVision OS02G10 sensor support"
+ 	depends on I2C && VIDEO_V4L2 && VIDEO_V4L2_SUBDEV_API

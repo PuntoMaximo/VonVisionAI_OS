@@ -1,0 +1,7 @@
+config BR2_PACKAGE_XDRIVER_XF86_VIDEO_ARMSOC
+	bool "xf86-video-armsoc"
+	depends on BR2_USE_MMU # libdrm
+	depends on BR2_PACKAGE_HAS_LIBGBM
+
+	help
+	  arm soc rockchip video driver

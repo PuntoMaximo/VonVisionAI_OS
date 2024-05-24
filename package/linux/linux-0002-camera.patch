@@ -1,0 +1,10 @@
+--- ./drivers/media/i2c/Makefileold	2024-01-31 10:51:45.384773134 -0500
++++ ./drivers/media/i2c/Makefile	2024-01-31 10:51:35.684695429 -0500
+@@ -160,6 +160,7 @@
+ obj-$(CONFIG_VIDEO_IMX415)	+= imx415.o
+ obj-$(CONFIG_VIDEO_IMX462)	+= imx462.o
+ obj-$(CONFIG_VIDEO_IMX464)	+= imx464.o
++obj-$(CONFIG_VIDEO_IMX586)	+= imx586.o
+ obj-$(CONFIG_VIDEO_GC02M2)	+= gc02m2.o
+ obj-$(CONFIG_VIDEO_GC0312)	+= gc0312.o
+ obj-$(CONFIG_VIDEO_GC0329)	+= gc0329.o

@@ -1,0 +1,7 @@
+config BR2_PACKAGE_MALI_UPDATE
+	bool "Mali driver update"
+		
+	depends on BR2_PACKAGE_ROCKCHIP_MALI
+
+	help
+	  mali driver update
