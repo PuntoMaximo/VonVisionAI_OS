@@ -1,0 +1,5 @@
+menuconfig BR2_PACKAGE_BOX64
+	bool "BOX64"
+	help
+	  BOX64
+

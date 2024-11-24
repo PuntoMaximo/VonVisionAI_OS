@@ -1,0 +1,6 @@
+menuconfig BR2_PACKAGE_GL4ES
+	bool "GL4ES"
+	select BR2_PACKAGE_PROVIDES_LIBGL
+	help
+	  GL4ES
+

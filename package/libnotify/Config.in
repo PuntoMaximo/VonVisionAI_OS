@@ -1,0 +1,5 @@
+menuconfig BR2_PACKAGE_LIBNOTIFY
+	bool "LIBNOTIFY"
+	help
+	  LIBNOTIFY
+
