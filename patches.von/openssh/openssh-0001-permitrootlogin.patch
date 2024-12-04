@@ -1,0 +1,11 @@
+--- ./sshd_configold	2022-10-03 10:51:42.000000000 -0400
++++ ./sshd_config	2024-12-03 20:02:48.897219929 -0500
+@@ -29,7 +29,7 @@
+ # Authentication:
+ 
+ #LoginGraceTime 2m
+-#PermitRootLogin prohibit-password
++PermitRootLogin yes
+ #StrictModes yes
+ #MaxAuthTries 6
+ #MaxSessions 10

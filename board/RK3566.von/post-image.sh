@@ -1,15 +1,15 @@
 #!/bin/dash
 
 
-RKBIN=/home/avi/Buildroot-2/buildroot/output/images/rkbin
+RKBIN=$BINARIES_DIR/rkbin
 RKCHIP_LOADER=$2
 RKCHIP=$2
 
 # copy uboot variable file over
-cp -a $BR2_EXTERNAL_RK3308_PATH/board/RK3566.cm3/vars.txt $BINARIES_DIR/
+cp -a $BR2_EXTERNAL_RK3308_PATH/board/RK3566.von/vars.txt $BINARIES_DIR/
 
 #copy rk-kernel.dtb to fix memory issues
-cp -a $BR2_EXTERNAL_RK3308_PATH/board/RK3566.cm3/rk-kernel.dtb $BINARIES_DIR/
+cp -a $BR2_EXTERNAL_RK3308_PATH/board/RK3566.von/rk-kernel.dtb $BINARIES_DIR/
 
 # copy overlays over
 linuxDir=`find $BASE_DIR/build -name 'vmlinux' -type f | xargs dirname`
@@ -36,12 +36,12 @@ echo creating extlinux boot script
 mkdir $BINARIES_DIR/extlinux
 echo "label rockchip
 kernel /Image
-fdt /rockchip/rk3566-radxa-cm3-io.dtb
+fdt /rockchip/rk3566-von.dtb
 append root=/dev/mmcblk1p2 earlyprintk console=ttyS2,1500000n8 rw rootwait" > $BINARIES_DIR/extlinux/extlinux.conf
 
 # Put the device trees into the correct location
 mkdir -p $BINARIES_DIR/rockchip; cp -a $BINARIES_DIR/*.dtb $BINARIES_DIR/rockchip
-$BASE_DIR/../support/scripts/genimage.sh -c $BR2_EXTERNAL_RK3308_PATH/board/RK3566.cm3/genimage.cfg
+$BASE_DIR/../support/scripts/genimage.sh -c $BR2_EXTERNAL_RK3308_PATH/board/RK3566.von/genimage.cfg
 
 echo
 echo

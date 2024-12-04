@@ -32,7 +32,8 @@ else
   echo The setup script is in this directory $1
 
   cd $BR_REPO_PATH
-  cp $CUSTOM_PATH/makefilepatches/mali-driver.mk ./package/mali-driver/mali-driver.mk
+  cp $CUSTOM_PATH/makefilepatches/rockchip-mali.mk ./package/rockchip-mali/rockchip-mali.mk
+  rm ./package/rockchip-mali/rockchip-mali.hash
 
   if [ ! -z $BR_DEFCONFIG ]; then
     echo using defined defconfig $BR_DEFCONFIG

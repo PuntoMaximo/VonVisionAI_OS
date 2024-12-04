@@ -2,9 +2,8 @@ image boot.vfat {
 	vfat {
 		files = {
 			vars.txt,
+			boot.scr,
 			Image,
-			rk-kernel.dtb,
-			extlinux/*,
 			rockchip/*
 		}
 	}
@@ -14,7 +13,7 @@ image boot.vfat {
 image sdcard.img {
 
 	hdimage {
-		partition-table-type = hybrid
+		gpt = true
 	}
 
 	partition loader1 {

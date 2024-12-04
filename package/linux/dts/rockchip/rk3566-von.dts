@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 /*
  * Copyright (c) 2020 Rockchip Electronics Co., Ltd.
- * Copyright (c) 2021 Radxa Limited.
+ * 
  *
  */
 
 /dts-v1/;
 
-#include "rk3566-radxa-rock-3-compute-module.dtsi"
-#include "rk3566-radxa-cm3-io-cameras.dtsi"
+#include "rk3566-von.dtsi"
+#include "rk3566-von-cameras.dtsi"
 
 / {
-	model = "Radxa CM3 IO";
-	compatible = "radxa,radxa-cm3-io", "rockchip,rk3566";
+	model = "Von Vision";
+	compatible = "von,von", "rockchip,rk3566";
 
 	hdmi_sound: hdmi-sound {
 		compatible = "simple-audio-card";
@@ -252,7 +252,7 @@
 	
 
 / {
-	compatible = "radxa,rock-3-b", "rockchip,rk3568";
+	compatible = "von", "rockchip,rk3568";
 
 	vcc_lcd_dsi0: vcc-lcd-dsi0 {
 		status = "okay";

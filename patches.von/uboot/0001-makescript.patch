@@ -1,0 +1,20 @@
+--- ./makeold.sh	2024-01-31 10:27:35.000000000 -0500
++++ ./make.sh	2024-11-24 11:26:57.029394000 -0500
+@@ -13,7 +13,7 @@
+ ########################################### User can modify #############################################
+ RKBIN_TOOLS=../../images/rkbin/tools
+ CROSS_COMPILE_ARM32=../prebuilts/gcc/linux-x86/arm/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
+-CROSS_COMPILE_ARM64=../prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-
++CROSS_COMPILE_ARM64=../../host/bin/aarch64-linux-gcc-
+ ########################################### User not touch #############################################
+ # Declare global INI file searching index name for every chip, update in select_chip_info()
+ RKCHIP=
+@@ -269,7 +269,7 @@
+ 			CROSS_COMPILE_ARM64=`cat ${CC_FILE}`
+ 		else
+ 			if grep -q '^CONFIG_ARM64=y' .config ; then
+-				CROSS_COMPILE_ARM64=$(cd `dirname ${CROSS_COMPILE_ARM64}`; pwd)"/aarch64-linux-gnu-"
++				CROSS_COMPILE_ARM64=$(cd `dirname ${CROSS_COMPILE_ARM64}`; pwd)"/aarch64-linux-"
+ 			else
+ 				CROSS_COMPILE_ARM32=$(cd `dirname ${CROSS_COMPILE_ARM32}`; pwd)"/arm-linux-gnueabihf-"
+ 			fi
