@@ -35,6 +35,10 @@ else
   cp $CUSTOM_PATH/makefilepatches/rockchip-mali.mk ./package/rockchip-mali/rockchip-mali.mk
   rm ./package/rockchip-mali/rockchip-mali.hash
 
+  cp $CUSTOM_PATH/makefilepatches/ffmpeg.mk ./package/ffmpeg/ffmpeg.mk
+  rm ./package/ffmpeg/*.patch
+  rm ./package/ffmpeg/*.hash
+
   if [ ! -z $BR_DEFCONFIG ]; then
     echo using defined defconfig $BR_DEFCONFIG
     echo "###### DON'T EDIT THIS FILE, EDIT $BR_RK3566_DEFCONFIG INSTEAD" > $CUSTOM_PATH/configs/$BR_DEFCONFIG

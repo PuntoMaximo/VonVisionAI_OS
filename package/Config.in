@@ -17,4 +17,8 @@ source "$BR2_EXTERNAL_RK3308_PATH/package/sdl3/Config.in"
 source "$BR2_EXTERNAL_RK3308_PATH/package/camera_engine_rkaiq/Config.in"
 source "$BR2_EXTERNAL_RK3308_PATH/package/rockchip-mali-update/Config.in"
 source "$BR2_EXTERNAL_RK3308_PATH/package/xdriver_xf86-video-armsoc/Config.in"
+source "$BR2_EXTERNAL_RK3308_PATH/package/ffrknn-sdl2/Config.in"
+source "$BR2_EXTERNAL_RK3308_PATH/package/ffrknn-sdl3/Config.in"
+source "$BR2_EXTERNAL_RK3308_PATH/package/ffrknn-ocr/Config.in"
+source "$BR2_EXTERNAL_RK3308_PATH/package/SDL_FontCache/Config.in"
 endmenu

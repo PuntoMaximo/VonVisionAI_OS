@@ -1,0 +1,9 @@
+config BR2_PACKAGE_FFRKNN_OCR
+    bool "ffrknn_ocr"
+    select BR2_PACKAGE_SDL_FONTCACHE
+    select BR2_PACKAGE_FFMPEG
+    select BR2_PACKAGE_OPENCV4
+    help
+        ff-rknn - Real-time Object Detection with NPU (Rockchip) with LPR
+
+
