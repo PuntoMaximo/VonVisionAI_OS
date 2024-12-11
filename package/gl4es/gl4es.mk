@@ -12,7 +12,7 @@ define GL4ES_INSTALL_CMDS
 #	Install headers
 	cp -dpfr $(@D)/include/GL $(O)/staging/usr/include/
 
-#	Install pkg config file
+#	Install pkg config file, this implementation will work independently of package version
 	cp $(@D)/gl.pc $(O)/staging/usr/lib/pkgconfig/
 
 #	Create symlink for default lib folder

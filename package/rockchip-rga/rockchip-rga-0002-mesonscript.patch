@@ -1,0 +1,7 @@
+--- /dev/null	2024-12-10 18:53:25.251152513 -0500
++++ ./meson_options.txt	2022-12-21 21:23:03.000000000 -0500
+@@ -0,0 +1,4 @@
++option('libdrm', type: 'combo', choices: ['true', 'false', 'auto'], value: 'auto',
++       description: 'With libdrm (default: auto)')
++option('librga_demo', type: 'combo', choices: ['true', 'false', 'auto'], value: 'false',
++       description: 'With librga_demo (default: false)')

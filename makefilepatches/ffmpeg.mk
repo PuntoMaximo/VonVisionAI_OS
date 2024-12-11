@@ -33,7 +33,8 @@ FFMPEG_CONF_OPTS = \
 	--enable-openssl 
 
 FFMPEG_DEPENDENCIES += host-pkgconf
-
+FFMPEG_DEPENDENCIES += mpp
+FFMPEG_DEPENDENCIES += rockchip-rga
 
 # Explicitly disable everything that doesn't match for ARM
 # FFMPEG "autodetects" by compiling an extended instruction via AS

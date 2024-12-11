@@ -39,6 +39,7 @@ else
   cp $CUSTOM_PATH/makefilepatches/Config.in.host ./package/qemu/Config.in.host
 	
   cp $CUSTOM_PATH/makefilepatches/ffmpeg.mk ./package/ffmpeg/ffmpeg.mk
+  cp $CUSTOM_PATH/makefilepatches/config.in ./package/ffmpeg/config.in
   rm ./package/ffmpeg/*.patch
   rm ./package/ffmpeg/*.hash
 

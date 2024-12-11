@@ -47,6 +47,12 @@ define ROCKCHIP_MALI_INSTALL_CMDS
 	$(HOST_DIR)/bin/patchelf --set-soname libmali.so.1 \
 		$(1)/usr/lib/$(ROCKCHIP_MALI_LIB)
 
+#	Generate and install the .pc files
+	mkdir -p $(1)/usr/lib/pkgconfig
+	$(foreach pkgconfig,$(ROCKCHIP_MALI_PKGCONFIG_FILES), \
+		sed -e '' $(@D)/build/meson-private/$(pkgconfig).pc > \
+			$(1)/usr/lib/pkgconfig/$(pkgconfig).pc
+	)
 
 #	Install all headers
 	$(foreach d,$(ROCKCHIP_MALI_HEADERS), \
