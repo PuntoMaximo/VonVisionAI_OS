@@ -89,23 +89,23 @@
 };
 
 &hdmi {
-	status = "disabled";
+	status = "okay";
 };
 
 &hdmi_in_vp0 {
-	status = "disabled";
+	status = "okay";
 };
 
 &hdmi_in_vp1 {
-	status = "disabled";
+	status = "okay";
 };
 
 &hdmi_sound {
-	status = "disabled";
+	status = "okay";
 };
 
 &route_hdmi {
-	status = "disabled";
+	status = "okay";
 	connect = <&vp0_out_hdmi>;
 };
 
@@ -267,7 +267,7 @@
 	};
 
 	backlight_dsi0: backlight-dsi0 {
-		status = "okay";
+		status = "disabled";
 		compatible = "pwm-backlight";
 		pwms = <&pwm14 0 25000 0>;
 		brightness-levels = <
@@ -316,10 +316,10 @@
 };
 
 &dsi0 {
-	status = "okay";
+	status = "disabled";
 
 	dsi0_panel: panel@0 {
-		status = "okay";
+		status = "disabled";
 		compatible = "simple-panel-dsi";
 		reg = <0>;
 		backlight = <&backlight_dsi0>;
@@ -421,23 +421,23 @@
 };
 
 &dsi0_in_vp0 {
-		status = "okay";
+		status = "disabled";
 };
 
 &dsi0_in_vp1 {
-		status = "okay";
+		status = "disabled";
 };
 
 &vp0_out_dsi0 {
-		status = "okay";
+		status = "disabled";
 };
 
 &vp1_out_dsi0 {
-		status = "okay";
+		status = "disabled";
 };
 
 &route_dsi0 {
-		status = "okay";
+		status = "disabled";
 	connect = <&vp1_out_dsi0>;
 };
 

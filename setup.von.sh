@@ -34,7 +34,10 @@ else
   cd $BR_REPO_PATH
   cp $CUSTOM_PATH/makefilepatches/rockchip-mali.mk ./package/rockchip-mali/rockchip-mali.mk
   rm ./package/rockchip-mali/rockchip-mali.hash
-
+  
+  rm ./package/qemu/Config.in.host
+  cp $CUSTOM_PATH/makefilepatches/Config.in.host ./package/qemu/Config.in.host
+	
   cp $CUSTOM_PATH/makefilepatches/ffmpeg.mk ./package/ffmpeg/ffmpeg.mk
   rm ./package/ffmpeg/*.patch
   rm ./package/ffmpeg/*.hash

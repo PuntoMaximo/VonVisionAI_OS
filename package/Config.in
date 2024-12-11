@@ -21,4 +21,7 @@ source "$BR2_EXTERNAL_RK3308_PATH/package/ffrknn-sdl2/Config.in"
 source "$BR2_EXTERNAL_RK3308_PATH/package/ffrknn-sdl3/Config.in"
 source "$BR2_EXTERNAL_RK3308_PATH/package/ffrknn-ocr/Config.in"
 source "$BR2_EXTERNAL_RK3308_PATH/package/SDL_FontCache/Config.in"
+source "$BR2_EXTERNAL_RK3308_PATH/package/box64/Config.in"
+source "$BR2_EXTERNAL_RK3308_PATH/package/libnotify/Config.in"
+source "$BR2_EXTERNAL_RK3308_PATH/package/gl4es/Config.in"
 endmenu

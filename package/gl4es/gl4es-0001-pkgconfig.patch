@@ -1,0 +1,15 @@
+--- /dev/null	2024-12-10 18:53:25.251152513 -0500
++++ ./gl.pc	2024-12-10 20:49:49.141245622 -0500
+@@ -0,0 +1,12 @@
++prefix=/usr
++exec_prefix=${prefix}
++libdir=${prefix}/lib
++includedir=${prefix}/include
++
++Name: gl
++Description:gl4es
++Requires.private:
++Version:
++Libs: -L${libdir} -lGL
++Libs.private: -lm -lpthread
++Cflags: -I${includedir} 

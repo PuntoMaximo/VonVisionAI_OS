@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-ROCKCHIP_RGA_VERSION = jellyfin-rga
-ROCKCHIP_RGA_SITE = https://github.com/nyanmisaka/rk-mirrors
+ROCKCHIP_RGA_VERSION = origin/v1.3.2_release
+ROCKCHIP_RGA_SITE = https://github.com/airockchip/librga
 ROCKCHIP_RGA_SITE_METHOD = git
 
 ROCKCHIP_RGA_INSTALL_STAGING = YES
