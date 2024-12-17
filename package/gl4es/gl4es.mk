@@ -14,6 +14,7 @@ define GL4ES_INSTALL_CMDS
 
 #	Install pkg config file, this implementation will work independently of package version
 	cp $(@D)/gl.pc $(O)/staging/usr/lib/pkgconfig/
+	cp $(@D)/dri.pc $(O)/staging/usr/lib/pkgconfig/
 
 #	Create symlink for default lib folder
 	ln -sf ./gl4es/libGL.so.1 $(O)/staging/usr/lib/libGL.so

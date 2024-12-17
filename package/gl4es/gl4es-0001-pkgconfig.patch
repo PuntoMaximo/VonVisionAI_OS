@@ -9,7 +9,7 @@
 +Name: gl
 +Description:gl4es
 +Requires.private:
-+Version:
++Version: 2.1
 +Libs: -L${libdir} -lGL
 +Libs.private: -lm -lpthread
 +Cflags: -I${includedir} 

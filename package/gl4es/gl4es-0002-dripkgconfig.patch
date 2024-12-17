@@ -1,0 +1,14 @@
+--- /dev/null	2024-12-10 18:53:25.251152513 -0500
++++ ./dri.pc	2024-12-11 09:03:02.448192000 -0500
+@@ -0,0 +1,10 @@
++prefix=/usr
++libdir=${prefix}/lib
++includedir=${prefix}/include
++
++dridriverdir=/usr/lib/dri
++
++Name: dri
++Description: Direct Rendering Infrastructure
++Version: 7.8.0
++Cflags: -I${includedir}
+\ No newline at end of file

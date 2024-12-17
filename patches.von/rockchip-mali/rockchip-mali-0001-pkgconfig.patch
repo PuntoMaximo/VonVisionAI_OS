@@ -1,0 +1,28 @@
+--- ./mesonold.build	2024-11-04 03:49:50.000000000 -0500
++++ ./meson.build	2024-12-11 10:49:23.685998492 -0500
+@@ -190,15 +190,7 @@
+ }
+ 
+ libhook = []
+-if build_hook
+-  # Build hook library
+-  subdir('hook')
+-
+-  # Recommend to link hook library before libmali
+-  mali_ldflags = libhook_ldflags
+-else
+-  mali_ldflags = []
+-endif
++
+ 
+ # Create dummy source for building dummy libraries
+ dummy_source = join_paths(meson.current_build_dir(), 'dummy.c')
+@@ -211,7 +203,7 @@
+   install : true,
+   version : mali_version)
+ 
+-mali_ldflags += ['-L${libdir}', '-lmali']
++mali_ldflags = ['-L${libdir}', '-lmali']
+ 
+ pkgconfig.generate(
+   libraries : mali_ldflags,

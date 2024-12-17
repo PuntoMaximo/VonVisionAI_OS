@@ -20,6 +20,7 @@ ROCKCHIP_MALI_HEADERS = EGL GLES GLES2 GLES3 KHR
 # - The .so symlinks needed at compile time by the compiler (*.so)
 ROCKCHIP_MALI_LIB_SYMLINKS = \
 	libmali.so.1 \
+	libmali.so \
 	libMali.so \
 	libEGL.so \
 	libgbm.so \
